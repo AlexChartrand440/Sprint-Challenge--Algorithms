@@ -15,8 +15,24 @@ b) Exponential O(c^n). The input drastically changes the speed and effenciency. 
 (n = 20) 20 passes * (j * 10 = 10) passes = 200 pases
 
 
-c) The input doubles the speed and effecency.
+c) O(n) The input doubles the speed and effecency.
 
 ## Exercise II
 
+    start = 0
+    end = len(n)
 
+    while end >= start:
+        
+        mid = (end + start) // 2;
+
+        if brk(mid):
+            if brk(mid - 1):
+                end = mid - 1;
+            if not brk(mid - 1):
+                return mid;
+        else not brk(mid):
+            if brk(mid + 1):
+                return mid + 1;
+            else:
+                start = mid + 1;
